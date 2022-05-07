@@ -1,0 +1,46 @@
+
+target_column: total
+metric_to_use: RMSE
+
+
+n_models: 4
+
+models_exclude: [
+  'huber',
+  'br',
+  # 'gbr',
+  'rf', #add later
+  'catboost', #add later
+  'llar',
+  'lr',
+  xgboost, #add later
+  et, 
+  knn,
+  ada,
+  ridge,
+  # lasso,
+  omp,
+  par,
+  en,
+  lar
+]
+
+tune_parameters:
+  is_used: false
+  n_iter: 10
+ensemble_parameters:
+  is_used: false
+  number_topmodels: 4 #always must be equal or less than n_models
+  methods: [Bagging,Boosting]
+
+blend_parameters:
+  is_used: false
+  number_topmodels: 4 #always must be equal or less than n_models
+  n_iter_in_tune: 10
+
+stack_parameters:
+  meta_model: lightgbm # This is the standard -> LogisticRegression 
+  is_used: false
+  number_topmodels: 4 #always must be equal or less than n_models
+  n_iter_in_tune: 10
+
