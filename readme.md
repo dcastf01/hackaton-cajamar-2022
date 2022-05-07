@@ -1,5 +1,5 @@
 
-#Cajamar 2022 Foot print
+# Cajamar 2022 Foot print
 
 
 Para la competición, comentar que el script de predicción sería utilzar el main.py y el script de análisis serían los notebooks de la carpeta notebooks, los cuales fueron creados a partir de colab.
